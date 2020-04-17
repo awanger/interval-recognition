@@ -1,6 +1,15 @@
+body {
+    background-color: $background-color;
+}
+
 .container {
+    padding: 200px auto;
     max-width: 810px;
     margin: 0 auto;
-    padding: 0 auto;
-    border: 1px solid black;
+    // border: 1px solid black;
 }
+
+.inner-container {
+    text-align: center;
+}
+

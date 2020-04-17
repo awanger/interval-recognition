@@ -1,15 +1,20 @@
+/* Layouts */
 body {
     background-color: $background-color;
 }
 
 .container {
-    padding: 200px auto;
     max-width: 810px;
     margin: 0 auto;
-    // border: 1px solid black;
-}
+    padding: 4%;
+    height: 50vh;
 
-.inner-container {
-    text-align: center;
+    .inner-container{
+        border-top: 2px solid rgba($base-color, .5);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    // border: 1px solid black;
 }
 

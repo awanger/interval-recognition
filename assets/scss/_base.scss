@@ -1,0 +1,21 @@
+/* Colors */
+$background-color: #182955; 
+$base-color: #fff;
+
+/* Fonts */
+$font-stack: "Avenir Next", sans-serif;
+$font-size: 15px;
+
+
+
+/* Typography */
+body {
+    font-family: $font-stack;
+    font-size: $font-size;
+    color: $base-color;
+}
+
+h1.question {
+    font-size: 2.4rem;
+    font-weight: 500;
+}

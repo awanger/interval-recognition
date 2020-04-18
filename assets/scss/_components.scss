@@ -1,23 +1,22 @@
 .btn {
     background-color: transparent;
-    color: rgba($primary-color, 1.0);
+    color: rgba($primary-color, 0.75);
     border: 2px solid rgba($primary-color, 0.75);
     border-radius: $border-radius;
     width: 136px;
     height: 36px;
-    display: flex;
     
+    &.disabled {
+        border: 2px solid rgba($primary-color, 0.50);
+    }
+
     &:hover {
-        border: 2px solid rgba($between-color, 1.0);
+        border: 2px solid $highlight-color;
+        color: $highlight-color;
         cursor: pointer;
-        color: rgba($between-color, 1.0);
     }
     
     &:focus {
         outline: none;
-    }
-
-    .btn-text {
-        margin: auto; // not sure why this works with display: flex
     }
 }

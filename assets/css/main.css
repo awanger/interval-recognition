@@ -14,13 +14,14 @@ h1.question {
 body {
   background-color: #182955; }
 
+.container .inner-container, footer {
+  border-top: 2px solid rgba(255, 255, 255, 0.5); }
+
 .container {
   max-width: 810px;
   margin: 0 auto;
-  padding: 4%;
-  height: 50vh; }
+  padding: 4%; }
   .container .inner-container {
-    border-top: 2px solid rgba(255, 255, 255, 0.5);
     text-align: center;
     display: flex;
     flex-direction: column; }
@@ -32,13 +33,17 @@ body {
   row-gap: 1rem;
   width: 600px; }
 
+footer .container {
+  display: flex;
+  justify-content: space-between; }
+
 .btn {
   border: 2px solid rgba(255, 255, 255, 0.75);
   border-radius: 9px;
   width: 136px;
   height: 36px;
   display: flex; }
-  .btn .interval {
+  .btn .btn-text {
     margin: auto; }
   .btn:hover {
     border: 2px solid #ffb800;

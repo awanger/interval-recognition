@@ -3,14 +3,18 @@ body {
     background-color: $background-color;
 }
 
+%white-border {
+    border-top: 2px solid rgba($base-color, .5);
+}
+
 .container {
     max-width: 810px;
     margin: 0 auto;
     padding: 4%;
-    height: 50vh;
+    // height: 50vh;
 
     .inner-container{
-        border-top: 2px solid rgba($base-color, .5);
+        @extend %white-border;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -27,6 +31,11 @@ body {
 
 
 footer {
+    @extend %white-border;
     
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 

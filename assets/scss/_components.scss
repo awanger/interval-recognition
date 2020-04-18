@@ -1,0 +1,17 @@
+.btn {
+    border: 2px solid rgba($base-color, 0.75);
+    border-radius: $border-radius;
+    width: 136px;
+    height: 36px;
+    display: flex;
+
+    .interval {
+        margin: auto; // not sure why this works with display: flex
+    }
+
+    &:hover {
+        border: 2px solid rgba($between-color, 1.0);
+        cursor: pointer;
+        color: rgba($between-color, 1.0);
+    }
+}

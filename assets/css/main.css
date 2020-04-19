@@ -25,7 +25,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-evenly;
+    height: 60vh; }
 
 .choice-grid {
   display: grid;
@@ -41,19 +42,34 @@ footer .container {
   display: flex;
   justify-content: space-between; }
 
-.btn {
+#speaker-btn:hover, .btn:hover {
+  border: 2px solid;
+  cursor: pointer; }
+
+#speaker-btn, #action-btn, .btn {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.75);
   border: 2px solid rgba(255, 255, 255, 0.75);
-  border-radius: 9px;
+  border-radius: 9px; }
+
+#speaker-btn {
+  width: 120px;
+  height: 120px; }
+  #speaker-btn:hover {
+    border-color: #73C2E0; }
+
+#action-btn {
+  width: 131px;
+  height: 37px; }
+
+.btn {
   width: 136px;
   height: 36px; }
   .btn.disabled {
-    border: 2px solid rgba(255, 255, 255, 0.5); }
+    border: 2px solid rgba(255, 255, 255, 0.25); }
   .btn:hover {
-    border: 2px solid #FFB800;
-    color: #FFB800;
-    cursor: pointer; }
+    border-color: #FFB800;
+    color: #FFB800; }
   .btn:focus {
     outline: none; }
 

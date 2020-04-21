@@ -31,12 +31,10 @@ speakerBtn.addEventListener("click", playQuestion, false);
 player = new mm.Player();
 
 function selectAnswer(e) {
-  if (selectedAnswer == null) {
-    selectedAnswer = e.currentTarget;
-  } else {
+  if (selectedAnswer != null) {
     selectedAnswer.classList.remove("selected"); // remove highlight from previously selected button
-    selectedAnswer = e.currentTarget; // select new button
   }
+  selectedAnswer = e.currentTarget; // select new button
   e.currentTarget.classList.add("selected");
 }
 

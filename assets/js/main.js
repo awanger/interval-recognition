@@ -18,11 +18,23 @@ const questions = [
 ]
 
 let shuffledQuestions, currentQuestion;
+let selectedAnswer; // only one answer should be selected at a time
+
+const possibleAnswers = document.querySelectorAll(".btn");
+possibleAnswers.forEach(function(button) {
+  button.addEventListener("click", selectAnswer);
+});
 
 const speakerBtn = document.querySelector('#speaker-btn');
 speakerBtn.addEventListener("click", playQuestion, false);
 // player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
 player = new mm.Player();
+
+function selectAnswer(e) {
+  e.currentTarget.classList.add("selected");
+  console.log("HELLO");
+}
+
 
 function playQuestion() {
   player.start(currentQuestion);
@@ -42,7 +54,7 @@ function init() {
   playQuestion();
 }
 
-init();
+// init();
 
 
 

@@ -3,6 +3,11 @@
     cursor: pointer;
 }
 
+%highlight-effect {
+    border-color: $highlight-color;
+    color: $highlight-color;
+}
+
 %button-styles {
     background-color: transparent;
     color: rgba($primary-color, 0.75);
@@ -34,10 +39,13 @@
         border: 2px solid rgba($primary-color, 0.25);
     }
 
+    &.selected {
+        @extend %highlight-effect;
+    }
+
     &:hover {
         @extend %hover-effect;
-        border-color: $highlight-color;
-        color: $highlight-color;
+        @extend %highlight-effect;
     }
     
     &:focus {

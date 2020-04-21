@@ -33,23 +33,33 @@
 
 #action-btn {
     @extend %button-style;
+    @extend %highlighted-style;
     width: 131px;
     height: 37px;
+    
+    &:hover {
+        background-color: rgba($highlight-color,0.90);
+        color: $background-color;
+    }
 
     &.disabled {
         @extend %disabled-style;
     }
+
+    &.highlight {
+        @extend %highlighted-style;
+    }
+
+
+    
 }
 
 .btn {
     @extend %button-style;
     width: 136px;
     height: 36px;
-    &.disabled {
-        @extend %disabled-style;
-    }
 
-    &.selected {
+    &.highlight {
         @extend %highlighted-style;
     }
 

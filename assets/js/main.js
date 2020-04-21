@@ -27,15 +27,25 @@ possibleAnswers.forEach(function(button) {
 
 const speakerBtn = document.querySelector('#speaker-btn');
 speakerBtn.addEventListener("click", playQuestion, false);
+const actionBtn = document.querySelector("#action-btn");
+
 // player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
 player = new mm.Player();
 
 function selectAnswer(e) {
-  if (selectedAnswer != null) {
-    selectedAnswer.classList.remove("selected"); // remove highlight from previously selected button
+  if (selectedAnswer) {
+    selectedAnswer.classList.remove("highlight"); // remove highlight from previously selected button
   }
   selectedAnswer = e.currentTarget; // select new button
-  e.currentTarget.classList.add("selected");
+  e.currentTarget.classList.add("highlight");
+  toggleActionBtn();
+}
+
+function toggleActionBtn() {
+  if(selectedAnswer) {
+    actionBtn.classList.remove("disabled");
+    actionBtn.classList.add("highlight");
+  }
 }
 
 

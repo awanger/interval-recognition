@@ -46,11 +46,11 @@ footer .container {
   border: 2px solid;
   cursor: pointer; }
 
-.btn.selected, .btn:hover {
+#action-btn, #action-btn.highlight, .btn.highlight, .btn:hover {
   border-color: #FFB800;
   color: #FFB800; }
 
-#action-btn.disabled, .btn.disabled {
+#action-btn.disabled {
   border: 2px solid rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.25);
   cursor: not-allowed; }
@@ -70,6 +70,9 @@ footer .container {
 #action-btn {
   width: 131px;
   height: 37px; }
+  #action-btn:hover {
+    background-color: rgba(255, 184, 0, 0.9);
+    color: #182955; }
 
 .btn {
   width: 136px;

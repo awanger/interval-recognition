@@ -32,13 +32,12 @@ player = new mm.Player();
 
 function selectAnswer(e) {
   if (selectedAnswer == null) {
-    e.currentTarget.classList.add("selected");
     selectedAnswer = e.currentTarget;
   } else {
-    selectedAnswer.classList.remove("selected"); // remove highlight from previously selected answer
-    selectedAnswer = e.currentTarget;
-    e.currentTarget.classList.add("selected");
+    selectedAnswer.classList.remove("selected"); // remove highlight from previously selected button
+    selectedAnswer = e.currentTarget; // select new button
   }
+  e.currentTarget.classList.add("selected");
 }
 
 

@@ -50,6 +50,10 @@ footer .container {
   border-color: #FFB800;
   color: #FFB800; }
 
+#action-btn.disabled, .btn.disabled {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.25); }
+
 #speaker-btn, #action-btn, .btn {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.75);
@@ -69,8 +73,6 @@ footer .container {
 .btn {
   width: 136px;
   height: 36px; }
-  .btn.disabled {
-    border: 2px solid rgba(255, 255, 255, 0.25); }
   .btn:focus {
     outline: none; }
 

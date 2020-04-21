@@ -1,14 +1,19 @@
-%hover-effect {
+%hover-style {
     border: 2px solid;
     cursor: pointer;
 }
 
-%highlight-effect {
+%highlighted-style {
     border-color: $highlight-color;
     color: $highlight-color;
 }
 
-%button-styles {
+%disabled-style {
+    border: 2px solid rgba($primary-color, 0.25);
+    color: rgba($primary-color, 0.25)
+}
+
+%button-style {
     background-color: transparent;
     color: rgba($primary-color, 0.75);
     border: 2px solid rgba($primary-color, 0.75);
@@ -16,36 +21,40 @@
 }
 
 #speaker-btn {
-    @extend %button-styles;
+    @extend %button-style;
     width: 120px;
     height: 120px;
     &:hover {
-        @extend %hover-effect;
+        @extend %hover-style;
         border-color: $audio-color;
     }
 }
 
 #action-btn {
-    @extend %button-styles;
+    @extend %button-style;
     width: 131px;
     height: 37px;
+
+    &.disabled {
+        @extend %disabled-style;
+    }
 }
 
 .btn {
-    @extend %button-styles;
+    @extend %button-style;
     width: 136px;
     height: 36px;
     &.disabled {
-        border: 2px solid rgba($primary-color, 0.25);
+        @extend %disabled-style;
     }
 
     &.selected {
-        @extend %highlight-effect;
+        @extend %highlighted-style;
     }
 
     &:hover {
-        @extend %hover-effect;
-        @extend %highlight-effect;
+        @extend %hover-style;
+        @extend %highlighted-style;
     }
     
     &:focus {

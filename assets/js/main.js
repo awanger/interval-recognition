@@ -31,8 +31,14 @@ speakerBtn.addEventListener("click", playQuestion, false);
 player = new mm.Player();
 
 function selectAnswer(e) {
-  e.currentTarget.classList.add("selected");
-  console.log("HELLO");
+  if (selectedAnswer == null) {
+    e.currentTarget.classList.add("selected");
+    selectedAnswer = e.currentTarget;
+  } else {
+    selectedAnswer.classList.remove("selected"); // remove highlight from previously selected answer
+    selectedAnswer = e.currentTarget;
+    e.currentTarget.classList.add("selected");
+  }
 }
 
 

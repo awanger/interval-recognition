@@ -10,7 +10,8 @@
 
 %disabled-style {
     border: 2px solid rgba($primary-color, 0.25);
-    color: rgba($primary-color, 0.25)
+    color: rgba($primary-color, 0.25);
+    cursor: not-allowed;
 }
 
 %button-style {

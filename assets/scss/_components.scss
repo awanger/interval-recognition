@@ -8,12 +8,6 @@
     color: $highlight-color;
 }
 
-%disabled-style {
-    border: 2px solid rgba($primary-color, 0.25);
-    color: rgba($primary-color, 0.25);
-    cursor: not-allowed;
-}
-
 %button-style {
     background-color: transparent;
     color: rgba($primary-color, 0.75);
@@ -33,25 +27,22 @@
 
 #action-btn {
     @extend %button-style;
-    @extend %highlighted-style;
+    border: 2px solid rgba($primary-color, 0.25);
     width: 131px;
     height: 37px;
+    color: rgba($primary-color, 0.25);
+    cursor: not-allowed;
     
-    &:hover {
-        background-color: rgba($highlight-color,0.90);
-        color: $background-color;
-    }
-
-    &.disabled {
-        @extend %disabled-style;
-    }
-
     &.highlight {
         @extend %highlighted-style;
+        cursor: pointer;
+        &:hover {
+            @extend %hover-style;
+            border-color: $highlight-color;
+            background-color: rgba($highlight-color,0.90);
+            color: $background-color;
+        }
     }
-
-
-    
 }
 
 .btn {

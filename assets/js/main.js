@@ -43,7 +43,6 @@ function selectAnswer(e) {
 
 function toggleActionBtn() {
   if(selectedAnswer) {
-    actionBtn.classList.remove("disabled");
     actionBtn.classList.add("highlight");
   }
 }

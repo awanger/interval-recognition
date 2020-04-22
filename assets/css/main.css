@@ -42,18 +42,13 @@ footer .container {
   display: flex;
   justify-content: space-between; }
 
-#speaker-btn:hover, .btn:hover {
+#speaker-btn:hover, #action-btn.highlight:hover, .btn:hover {
   border: 2px solid;
   cursor: pointer; }
 
-#action-btn, #action-btn.highlight, .btn.highlight, .btn:hover {
+#action-btn.highlight, .btn.highlight, .btn:hover {
   border-color: #FFB800;
   color: #FFB800; }
-
-#action-btn.disabled {
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  color: rgba(255, 255, 255, 0.25);
-  cursor: not-allowed; }
 
 #speaker-btn, #action-btn, .btn {
   background-color: transparent;
@@ -68,11 +63,17 @@ footer .container {
     border-color: #73C2E0; }
 
 #action-btn {
+  border: 2px solid rgba(255, 255, 255, 0.25);
   width: 131px;
-  height: 37px; }
-  #action-btn:hover {
-    background-color: rgba(255, 184, 0, 0.9);
-    color: #182955; }
+  height: 37px;
+  color: rgba(255, 255, 255, 0.25);
+  cursor: not-allowed; }
+  #action-btn.highlight {
+    cursor: pointer; }
+    #action-btn.highlight:hover {
+      border-color: #FFB800;
+      background-color: rgba(255, 184, 0, 0.9);
+      color: #182955; }
 
 .btn {
   width: 136px;

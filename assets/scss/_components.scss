@@ -28,9 +28,9 @@
 #action-btn {
     @extend %button-style;
     border: 2px solid rgba($primary-color, 0.25);
+    color: rgba($primary-color, 0.25);
     width: 131px;
     height: 37px;
-    color: rgba($primary-color, 0.25);
     cursor: not-allowed;
     
     &.highlight {
@@ -43,6 +43,20 @@
             color: $background-color;
         }
     }
+
+    &.next {
+        border: 2px solid rgba($primary-color, 1.0);
+        color: rgba($primary-color, 1.0);
+        cursor: pointer;
+        &:hover {
+            @extend %hover-style;
+            border-color: $primary-color;
+            background-color: $primary-color;
+            color: $correct-color;
+        }
+    }
+
+    
 }
 
 .btn {

@@ -28,6 +28,7 @@ possibleAnswers.forEach(function(button) {
 const speakerBtn = document.querySelector('#speaker-btn');
 speakerBtn.addEventListener("click", playQuestion, false);
 const actionBtn = document.querySelector("#action-btn");
+const footer = document.querySelector('footer');
 
 // player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
 player = new mm.Player();
@@ -38,10 +39,10 @@ function selectAnswer(e) {
   }
   selectedAnswer = e.currentTarget; // select new button
   e.currentTarget.classList.add("highlight");
-  toggleActionBtn();
+  activateActionBtn();
 }
 
-function toggleActionBtn() {
+function activateActionBtn() {
   if(selectedAnswer) {
     actionBtn.classList.add("highlight");
     actionBtn.addEventListener("click", checkAnswer, false);
@@ -51,9 +52,27 @@ function toggleActionBtn() {
 function checkAnswer() {
   var selectedCode = selectedAnswer.children[0].innerText;
   if(selectedCode == currentQuestion.correctAnswer) {
-    console.log("you got the question right!");
+    // remove and add the appropriate CSS classes for the action button
+    actionBtn.classList.remove("highlight");
+    actionBtn.classList.add("next");
+
+    // change the button text
+    actionBtn.innerHTML = "Next"
+
+
+
+    actionBtn.removeEventListener("click", checkAnswer, false);
+    actionBtn.addEventListener("click", nextQuestion, false);
+
+
+    
+    actionBtn.innerHTML = "Next";
+
+
+    footer.classList.add("correct");
   } else {
     console.log("aw phooey. please try again");
+    // disable selection of everything except for the try again button
   }
 }
 
@@ -66,16 +85,13 @@ function displayQuestion() {
 }
 
 function nextQuestion() {
-  console.log('what');
+  console.log('i just ran the nextQuestion function');
 }
 
 function init() {
   shuffledQuestions = questions;
   currentQuestion = shuffledQuestions[0]; 
-  playQuestion();
+  // playQuestion();
 }
 
 init();
-
-
-

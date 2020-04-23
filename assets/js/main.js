@@ -44,9 +44,18 @@ function selectAnswer(e) {
 function toggleActionBtn() {
   if(selectedAnswer) {
     actionBtn.classList.add("highlight");
+    actionBtn.addEventListener("click", checkAnswer, false);
   }
 }
 
+function checkAnswer() {
+  var selectedCode = selectedAnswer.children[0].innerText;
+  if(selectedCode == currentQuestion.correctAnswer) {
+    console.log("you got the question right!");
+  } else {
+    console.log("aw phooey. please try again");
+  }
+}
 
 function playQuestion() {
   player.start(currentQuestion);
@@ -66,7 +75,7 @@ function init() {
   playQuestion();
 }
 
-// init();
+init();
 
 
 

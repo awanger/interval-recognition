@@ -29,6 +29,7 @@ const speakerBtn = document.querySelector('#speaker-btn');
 speakerBtn.addEventListener("click", playQuestion, false);
 const actionBtn = document.querySelector("#action-btn");
 const footer = document.querySelector('footer');
+let footerContainer = footer.firstElementChild;
 
 // player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
 player = new mm.Player();
@@ -50,26 +51,29 @@ function activateActionBtn() {
 }
 
 function checkAnswer() {
+  actionBtn.classList.remove("highlight");
+  selectedAnswer.classList.remove("highlight");
   var selectedCode = selectedAnswer.children[0].innerText;
+  var comment = document.createElement("div");
+
   if(selectedCode == currentQuestion.correctAnswer) {
     // remove and add the appropriate CSS classes for the action button
-    actionBtn.classList.remove("highlight");
     actionBtn.classList.add("next");
-
-    // change the button text
     actionBtn.innerHTML = "Next"
-
-
-
     actionBtn.removeEventListener("click", checkAnswer, false);
     actionBtn.addEventListener("click", nextQuestion, false);
 
 
+    comment.innerHTML = '<img class="icon" src="assets/icons/checkmark.svg" alt=""> That\'s correct. Nice job!'
+    comment.classList.add("comment");
     
-    actionBtn.innerHTML = "Next";
-
-
+    // add appropriate classes for footer    
     footer.classList.add("correct");
+    footerContainer.replaceChild(comment, footerContainer.firstElementChild) // replace help icon with comment instead
+
+    selectedAnswer.classList.add("correct");
+
+
   } else {
     console.log("aw phooey. please try again");
     // disable selection of everything except for the try again button

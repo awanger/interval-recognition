@@ -68,6 +68,11 @@
         @extend %highlighted-style;
     }
 
+    &.correct {
+        border-color: $correct-color;
+        color: $correct-color;
+    }
+
     &:hover {
         @extend %hover-style;
         @extend %highlighted-style;
@@ -76,4 +81,9 @@
     &:focus {
         outline: none;
     }
+}
+
+.icon {
+    max-width: 22px;
+    vertical-align: center;
 }

@@ -24,7 +24,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 60vh; }
+    height: 65vh; }
 
 .choice-grid {
   display: grid;
@@ -92,7 +92,14 @@ footer {
 .btn {
   width: 136px;
   height: 36px; }
+  .btn.correct {
+    border-color: rgba(149, 217, 175, 0.75);
+    color: rgba(149, 217, 175, 0.75); }
   .btn:focus {
     outline: none; }
+
+.icon {
+  max-width: 22px;
+  vertical-align: center; }
 
 /*# sourceMappingURL=main.css.map */

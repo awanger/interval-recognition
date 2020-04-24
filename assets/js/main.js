@@ -45,7 +45,6 @@ function resetState() {
   actionBtn.innerText = "Check";
   actionBtn.classList = "";
   actionBtn.removeEventListener("click", nextQuestion, false);
-  actionBtn.addEventListener("click", checkAnswer, false);
 
   // reset selectedAnswer
   selectedAnswer.classList = selectedAnswer.classList[0]; //remove every class except the first one
@@ -101,14 +100,19 @@ function playQuestion() {
   player.start(currentQuestion);
 }
 
-function addEventListeners() {
+function initQuiz() {
+  playQuestion();
   console.log("adding all the appropriate event listeners");
 }
 
-function init() {
+function shuffleQuestions() {
   shuffledQuestions = questions;
   currentQuestion = shuffledQuestions[0];
-  // playQuestion();
 }
 
-init();
+function main() {
+  shuffleQuestions();
+  initQuiz();
+}
+
+main();

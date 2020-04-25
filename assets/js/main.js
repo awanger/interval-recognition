@@ -45,13 +45,11 @@ function resetState() {
   actionBtn.innerText = "Check";
   actionBtn.classList = "";
   actionBtn.removeEventListener("click", nextQuestion, false);
-  actionBtn.removeEventListener("click", tryAgain, false)
+  actionBtn.removeEventListener("click", tryAgain, false);
 
   // reset selectedAnswer
   selectedAnswer.classList = selectedAnswer.classList[0]; //remove every class except the first one
   selectedAnswer = null;
-  
-  playQuestion();
 
 }
 
@@ -106,24 +104,41 @@ function checkAnswer() {
 }
 function nextQuestion() {
   resetState();
+  shuffleQuestions();
+  playQuestion();
 }
 
 function tryAgain() {
   resetState();
+  playQuestion();
 }
 
 function playQuestion() {
-  player.start(currentQuestion);
+  setTimeout(function() { player.start(currentQuestion)}, 1000)
 }
 
 function shuffleQuestions() {
-  shuffledQuestions = questions;
+
+  // Taken from https://bit.ly/2KvsvDw
+  // Fisher-Yates algorithm
+  function yatesShuffle(array) {
+    for(let i = array.length-1; i > 0; i--){
+      const j = Math.floor(Math.random() * i)
+      const temp = array[i]
+      array[i] = array[j]
+      array[j] = temp
+    }
+    return array;
+  }
+  
+  shuffledQuestions = yatesShuffle(questions);
   currentQuestion = shuffledQuestions[0];
 }
 
 function init() {
   shuffleQuestions();
   playQuestion();
+  console.log("initialized");
 }
 
 init();

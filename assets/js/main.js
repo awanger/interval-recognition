@@ -49,6 +49,8 @@ function resetState() {
   // reset selectedAnswer
   selectedAnswer.classList = selectedAnswer.classList[0]; //remove every class except the first one
   selectedAnswer = null;
+  
+  init();
 
 }
 
@@ -100,19 +102,14 @@ function playQuestion() {
   player.start(currentQuestion);
 }
 
-function initQuiz() {
-  playQuestion();
-  console.log("adding all the appropriate event listeners");
-}
-
 function shuffleQuestions() {
   shuffledQuestions = questions;
   currentQuestion = shuffledQuestions[0];
 }
 
-function main() {
+function init() {
   shuffleQuestions();
-  initQuiz();
+  playQuestion();
 }
 
-main();
+init();

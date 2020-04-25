@@ -44,7 +44,7 @@
         }
     }
 
-    &.next {
+    &.correct {
         border: 2px solid rgba($primary-color, 1.0);
         color: rgba($primary-color, 1.0);
         cursor: pointer;
@@ -53,8 +53,21 @@
             border-color: $primary-color;
             background-color: $primary-color;
             color: $correct-color;
+        }    
+    }
+
+    &.incorrect {
+        border: 2px solid rgba($primary-color, 1.0);
+        color: rgba($primary-color, 1.0);
+        cursor:pointer;
+        &:hover {
+            @extend %hover-style;
+            border-color: $primary-color;
+            background-color: $primary-color;
+            color: $incorrect-color;
         }
     }
+
 
     
 }
@@ -71,6 +84,11 @@
     &.correct {
         border-color: $correct-color;
         color: $correct-color;
+    }
+
+    &.incorrect {
+        border-color: $incorrect-color;
+        color: $incorrect-color;
     }
 
     &:hover {

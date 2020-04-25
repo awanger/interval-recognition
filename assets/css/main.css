@@ -48,7 +48,7 @@ footer {
   footer.incorrect {
     background-color: rgba(219, 146, 146, 0.75); }
 
-#speaker-btn:hover, #action-btn.highlight:hover, #action-btn.next:hover, .btn:hover {
+#speaker-btn:hover, #action-btn.highlight:hover, #action-btn.correct:hover, #action-btn.incorrect:hover, .btn:hover {
   border: 2px solid;
   cursor: pointer; }
 
@@ -80,14 +80,22 @@ footer {
       border-color: #FFB800;
       background-color: rgba(255, 184, 0, 0.9);
       color: #182955; }
-  #action-btn.next {
+  #action-btn.correct {
     border: 2px solid white;
     color: white;
     cursor: pointer; }
-    #action-btn.next:hover {
+    #action-btn.correct:hover {
       border-color: #fff;
       background-color: #fff;
       color: rgba(149, 217, 175, 0.75); }
+  #action-btn.incorrect {
+    border: 2px solid white;
+    color: white;
+    cursor: pointer; }
+    #action-btn.incorrect:hover {
+      border-color: #fff;
+      background-color: #fff;
+      color: rgba(219, 146, 146, 0.75); }
 
 .btn {
   width: 136px;
@@ -95,6 +103,9 @@ footer {
   .btn.correct {
     border-color: rgba(149, 217, 175, 0.75);
     color: rgba(149, 217, 175, 0.75); }
+  .btn.incorrect {
+    border-color: rgba(219, 146, 146, 0.75);
+    color: rgba(219, 146, 146, 0.75); }
   .btn:focus {
     outline: none; }
 

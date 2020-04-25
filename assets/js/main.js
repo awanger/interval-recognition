@@ -45,12 +45,13 @@ function resetState() {
   actionBtn.innerText = "Check";
   actionBtn.classList = "";
   actionBtn.removeEventListener("click", nextQuestion, false);
+  actionBtn.removeEventListener("click", tryAgain, false)
 
   // reset selectedAnswer
   selectedAnswer.classList = selectedAnswer.classList[0]; //remove every class except the first one
   selectedAnswer = null;
   
-  init();
+  playQuestion();
 
 }
 
@@ -73,12 +74,12 @@ function activateActionBtn() {
 function checkAnswer() {
   actionBtn.classList.remove("highlight");
   actionBtn.removeEventListener("click", checkAnswer, false);
-  selectedAnswer.classList.remove("highlight");
   var selectedCode = selectedAnswer.children[0].innerText;
+  console.log(selectedAnswer);
+  selectedAnswer.classList.remove("highlight");
 
   if(selectedCode == currentQuestion.correctAnswer) {
-    // remove and add the appropriate CSS classes for the action button
-    actionBtn.classList.add("next");
+    actionBtn.classList.add("correct");
     actionBtn.innerHTML = "Next"
     actionBtn.addEventListener("click", nextQuestion, false);
     // add comment
@@ -90,11 +91,24 @@ function checkAnswer() {
     // modify selected button
     selectedAnswer.classList.add("correct");
   } else {
-    console.log("aw phooey. please try again");
-    // disable selection of everything except for the try again button
+    actionBtn.classList.add("incorrect");
+    actionBtn.innerHTML = "Try Again"
+    actionBtn.addEventListener("click", tryAgain, false);
+    // add comment
+    comment.innerHTML = '<img class="icon" src="assets/icons/xmark.svg" alt=""> Not quite...please try again'
+    comment.classList.add("comment");    
+    // add appropriate classes for footer    
+    footer.classList.add("incorrect");
+    footerContainer.replaceChild(comment, footerContainer.firstElementChild) // replace help icon with comment instead
+    // modify selected button
+    selectedAnswer.classList.add("incorrect");
   }
 }
 function nextQuestion() {
+  resetState();
+}
+
+function tryAgain() {
   resetState();
 }
 

@@ -47,7 +47,6 @@ function checkAnswer() {
   actionBtn.classList.remove("highlight");
   actionBtn.removeEventListener("click", checkAnswer, false);
   var selectedCode = selectedAnswer.children[0].innerText;
-  console.log(selectedAnswer);
   selectedAnswer.classList.remove("highlight");
 
   if(selectedCode == currentQuestion.correctAnswer) {
@@ -115,7 +114,7 @@ function init() {
     button.addEventListener("click", selectAnswer);
   });
   speakerBtn.addEventListener("click", playQuestion, false);
-  // playQuestion();
+  playQuestion();
   console.log("initialized");
 }
 

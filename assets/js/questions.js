@@ -52,20 +52,22 @@ function calcCorrectAnswer(interval) {
 }
 
 
-// for(i=0; i<50; i++) {
-//     q = new Question([{pitch: 60, startTime: 0.0, endTime: 2.0}, {pitch: 61, startTime: 2.0, endTime: 4.0}],
 
-// }
-
-var randomInterval = createRandomInterval();
-console.log(randomInterval);
-console.log(calcCorrectAnswer(randomInterval));
-
-const q = new Question(randomInterval, 
-                       calcCorrectAnswer(randomInterval),
-                        4);
-
+// for debugging purposes
+// var randomInterval = createRandomInterval();
+// console.log(randomInterval);
+// console.log(calcCorrectAnswer(randomInterval));
+// const q = new Question(randomInterval, 
+//                        calcCorrectAnswer(randomInterval),
+//                         4);
 // console.log(q);
+//
 
-const questions = []
-questions.push(q);
+
+let questions = []
+for(i=0; i<8; i++) {
+    let randomInterval = createRandomInterval();
+    const q = new Question(randomInterval, calcCorrectAnswer(randomInterval), 4);
+    questions.push(q);                             
+}
+console.log(questions);

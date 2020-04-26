@@ -21,7 +21,7 @@ function getRandomInteger(min, max) {
 }
 
 function createRandomInterval() {
-    var firstPitch = getRandomInteger(40, 89); // limit the pitch range
+    var firstPitch = getRandomInteger(40, 76); // limit the pitch range
     var firstNote = new Note(firstPitch, 0.0, 2.0);
     var secondNote = new Note(getRandomInteger(firstPitch-13, firstPitch+13),
                               2.0, 4.0); // might get a unison and don't forget about tritone

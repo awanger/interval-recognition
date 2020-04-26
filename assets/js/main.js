@@ -32,8 +32,8 @@ const footer = document.querySelector('footer');
 let footerContainer = footer.firstElementChild;
 let comment = document.querySelector(".comment")
 
-// player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
-player = new mm.Player();
+player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
+// player = new mm.Player();
 
 
 function resetState() {

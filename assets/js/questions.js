@@ -65,9 +65,9 @@ function calcCorrectAnswer(interval) {
 
 
 let questions = []
-for(i=0; i<8; i++) {
+for(i=0; i<50; i++) {
     let randomInterval = createRandomInterval();
     const q = new Question(randomInterval, calcCorrectAnswer(randomInterval), 4);
-    questions.push(q);                             
+    questions.push(q);
 }
 console.log(questions);

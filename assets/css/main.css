@@ -10,6 +10,11 @@ h1.question {
   font-size: 2.4rem;
   font-weight: 500; }
 
+/* Utility classes */
+.disable {
+  pointer-events: none;
+  opacity: 0.4; }
+
 /* Layouts */
 body {
   background-color: #182955; }

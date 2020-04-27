@@ -1,13 +1,14 @@
 player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
 // player = new mm.Player();
 
-let shuffledQuestions, currentQuestion, selectedAnswer;
-const possibleAnswers = document.querySelectorAll(".btn");
+const wholePage = document.querySelector('body');
+const possibleAnswers = document.querySelectorAll('.btn');
 const speakerBtn = document.querySelector('#speaker-btn');
 const actionBtn = document.querySelector("#action-btn");
 const footer = document.querySelector('footer');
+let shuffledQuestions, currentQuestion, selectedAnswer;
 let footerContainer = footer.firstElementChild;
-let comment = document.querySelector(".comment")
+let comment = document.querySelector('.comment')
 
 
 function resetState() {
@@ -87,7 +88,9 @@ function tryAgain() {
 }
 
 function playQuestion() {
-  setTimeout(function() { player.start(currentQuestion)}, 1000)
+  setTimeout(function() { player.start(currentQuestion)}, 1000);
+  wholePage.classList.add('disable');
+  setTimeout(function() { wholePage.classList.remove('disable')}, 5000);
 }
 
 function shuffleQuestions() {

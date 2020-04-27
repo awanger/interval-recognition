@@ -6,6 +6,7 @@
 %highlighted-style {
     border-color: $highlight-color;
     color: $highlight-color;
+    pointer-events: auto;
 }
 
 %button-style {
@@ -31,11 +32,10 @@
     color: rgba($primary-color, 0.25);
     width: 131px;
     height: 37px;
-    cursor: not-allowed;
+    pointer-events: none; /* disabled by default */
     
     &.highlight {
         @extend %highlighted-style;
-        cursor: pointer;
         &:hover {
             @extend %hover-style;
             border-color: $highlight-color;
@@ -45,11 +45,10 @@
     }
 
     &.correct {
+        @extend .highlight;
         border: 2px solid rgba($primary-color, 1.0);
         color: rgba($primary-color, 1.0);
-        cursor: pointer;
         &:hover {
-            @extend %hover-style;
             border-color: $primary-color;
             background-color: $primary-color;
             color: $correct-color;
@@ -57,13 +56,8 @@
     }
 
     &.incorrect {
-        border: 2px solid rgba($primary-color, 1.0);
-        color: rgba($primary-color, 1.0);
-        cursor:pointer;
+        @extend .correct;
         &:hover {
-            @extend %hover-style;
-            border-color: $primary-color;
-            background-color: $primary-color;
             color: $incorrect-color;
         }
     }

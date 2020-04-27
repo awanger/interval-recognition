@@ -41,9 +41,9 @@ footer {
   footer .container {
     display: flex;
     justify-content: space-between; }
-  footer.correct, footer.incorrect {
+  footer.correct, footer#action-btn.incorrect, footer.incorrect {
     border-top: none; }
-  footer.correct {
+  footer.correct, footer#action-btn.incorrect {
     background-color: rgba(149, 217, 175, 0.75); }
   footer.incorrect {
     background-color: rgba(219, 146, 146, 0.75); }
@@ -52,9 +52,10 @@ footer {
   border: 2px solid;
   cursor: pointer; }
 
-#action-btn.highlight, .btn.highlight, .btn:hover {
+#action-btn.highlight, #action-btn.correct, #action-btn.incorrect, .btn.highlight, .btn:hover {
   border-color: #FFB800;
-  color: #FFB800; }
+  color: #FFB800;
+  pointer-events: auto; }
 
 #speaker-btn, #action-btn, .btn {
   background-color: transparent;
@@ -73,34 +74,26 @@ footer {
   color: rgba(255, 255, 255, 0.25);
   width: 131px;
   height: 37px;
-  cursor: not-allowed; }
-  #action-btn.highlight {
-    cursor: pointer; }
-    #action-btn.highlight:hover {
-      border-color: #FFB800;
-      background-color: rgba(255, 184, 0, 0.9);
-      color: #182955; }
-  #action-btn.correct {
+  pointer-events: none;
+  /* disabled by default */ }
+  #action-btn.highlight:hover, #action-btn.correct:hover, #action-btn.incorrect:hover {
+    border-color: #FFB800;
+    background-color: rgba(255, 184, 0, 0.9);
+    color: #182955; }
+  #action-btn.correct, #action-btn.incorrect {
     border: 2px solid white;
-    color: white;
-    cursor: pointer; }
-    #action-btn.correct:hover {
+    color: white; }
+    #action-btn.correct:hover, #action-btn.incorrect:hover {
       border-color: #fff;
       background-color: #fff;
       color: rgba(149, 217, 175, 0.75); }
-  #action-btn.incorrect {
-    border: 2px solid white;
-    color: white;
-    cursor: pointer; }
-    #action-btn.incorrect:hover {
-      border-color: #fff;
-      background-color: #fff;
-      color: rgba(219, 146, 146, 0.75); }
+  #action-btn.incorrect:hover {
+    color: rgba(219, 146, 146, 0.75); }
 
 .btn {
   width: 136px;
   height: 36px; }
-  .btn.correct {
+  .btn.correct, .btn#action-btn.incorrect {
     border-color: rgba(149, 217, 175, 0.75);
     color: rgba(149, 217, 175, 0.75); }
   .btn.incorrect {

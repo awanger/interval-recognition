@@ -1,8 +1,8 @@
 player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
 // player = new mm.Player();
 
-const wholePage = document.querySelector('body');
 const possibleAnswers = document.querySelectorAll('.btn');
+const answerGrid = document.querySelector('#answer-buttons')
 const speakerBtn = document.querySelector('#speaker-btn');
 const actionBtn = document.querySelector("#action-btn");
 const footer = document.querySelector('footer');
@@ -88,10 +88,10 @@ function tryAgain() {
 }
 
 function playQuestion() {
-  wholePage.classList.add('disable');
+  answerGrid.classList.add('disable');
   speakerBtn.classList.add('animate');
   setTimeout(function() { player.start(currentQuestion)}, 1000);
-  setTimeout(function() { wholePage.classList.remove('disable')
+  setTimeout(function() { answerGrid.classList.remove('disable')
                           speakerBtn.classList.remove('animate')}, 5000);
 }
 
@@ -123,4 +123,4 @@ function init() {
   console.log("initialized");
 }
 
-init();
+window.onload = init;

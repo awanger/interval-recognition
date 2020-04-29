@@ -20,7 +20,10 @@ body {
     }
 } @media (max-width: $breakpoint-mobile) {
     .container {
-        max-width: 320px;
+        max-width: 340px;
+        .inner-container {
+            height: 75vh;
+        }
     }
 }
 

@@ -30,7 +30,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 65vh; }
+    height: 60vh; }
 
 .choice-grid {
   display: grid;

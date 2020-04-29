@@ -20,10 +20,16 @@
     @extend %button-style;
     width: 120px;
     height: 120px;
+    
     &:hover {
         @extend %hover-style;
         border-color: $audio-color;
     }
+
+    &.animate {
+        animation: pulse 1s infinite alternate;
+    }
+
 } @media(max-width: $breakpoint-mobile) {
     #speaker-btn {
         width: 60px;
@@ -31,6 +37,15 @@
         img {
             width: 60%;
         }
+    }
+}  @keyframes pulse {
+    0% {
+        transform: scale(1,1);
+    }
+
+    100% {
+        transform: scale(1.2, 1.2);
+        border-color: $audio-color;
     }
 }
 
@@ -75,7 +90,6 @@
     @extend %button-style;
     width: 136px;
     height: 36px;
-
     &.highlight {
         @extend %highlighted-style;
     }
@@ -104,3 +118,4 @@
     max-width: 22px;
     vertical-align: center;
 }
+

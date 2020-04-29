@@ -88,9 +88,11 @@ function tryAgain() {
 }
 
 function playQuestion() {
-  setTimeout(function() { player.start(currentQuestion)}, 1000);
   wholePage.classList.add('disable');
-  setTimeout(function() { wholePage.classList.remove('disable')}, 5000);
+  speakerBtn.classList.add('animate');
+  setTimeout(function() { player.start(currentQuestion)}, 1000);
+  setTimeout(function() { wholePage.classList.remove('disable')
+                          speakerBtn.classList.remove('animate')}, 5000);
 }
 
 function shuffleQuestions() {

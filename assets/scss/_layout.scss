@@ -1,10 +1,11 @@
 /* Layouts */
 body {
     background-color: $background-color;
+    user-select: none;
 }
 
 .container {
-    max-width: 810px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 4%;
     // height: 50vh;

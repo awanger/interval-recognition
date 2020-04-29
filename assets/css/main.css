@@ -17,10 +17,11 @@ h1.question {
 
 /* Layouts */
 body {
-  background-color: #182955; }
+  background-color: #182955;
+  user-select: none; }
 
 .container {
-  max-width: 810px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 4%; }
   .container .inner-container {

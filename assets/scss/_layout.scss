@@ -18,20 +18,38 @@ body {
         justify-content: space-evenly;
         height: 60vh;
     }
+} @media (max-width: $breakpoint-mobile) {
+
 }
 
-.choice-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-gap: 1rem;
-    max-width: 800px;
-
-    .btn {
-        grid-column: span 2;
+@media (min-width: $breakpoint-desktop) {
+    .choice-grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-gap: 1rem;
+        max-width: 800px;
+    
+        .btn {
+            grid-column: span 2;
+        }
+    
+        .btn:nth-child(11) {
+            grid-column: 3 / span 2;
+        }
+    }
+} @media (max-width: $breakpoint-mobile) {
+    .choice-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
     }
 
-    .btn:nth-child(11) {
-        grid-column: 3 / span 2;
+    .btn {
+        grid-column: span 1;
+    }
+
+    .btn:nth-child(13) {
+        grid-column: 2 / span 1;
     }
 }
 

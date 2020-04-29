@@ -1,5 +1,11 @@
 /* Colors */
+/* Breakpoints for responsive design */
 /* Fonts */
+/* Utility classes */
+.disable {
+  pointer-events: none;
+  opacity: 0.4; }
+
 /* Typography */
 body {
   font-family: "Avenir Next", sans-serif;
@@ -10,11 +16,12 @@ h1.question {
   font-size: 2.4rem;
   font-weight: 500; }
 
-/* Utility classes */
-.disable {
-  pointer-events: none;
-  opacity: 0.4; }
+@media (min-width: 375px) {
+  body {
+    font-size: 12px; }
 
+  h1.question {
+    font-size: 1.3rem; } }
 /* Layouts */
 body {
   background-color: #182955;
@@ -32,16 +39,27 @@ body {
     justify-content: space-evenly;
     height: 60vh; }
 
-.choice-grid {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-gap: 1rem;
-  max-width: 800px; }
-  .choice-grid .btn {
-    grid-column: span 2; }
-  .choice-grid .btn:nth-child(11) {
-    grid-column: 3 / span 2; }
+@media (min-width: 376px) {
+  .choice-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 1rem;
+    max-width: 800px; }
+    .choice-grid .btn {
+      grid-column: span 2; }
+    .choice-grid .btn:nth-child(11) {
+      grid-column: 3 / span 2; } }
+@media (max-width: 375px) {
+  .choice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem; }
 
+  .btn {
+    grid-column: span 1; }
+
+  .btn:nth-child(13) {
+    grid-column: 2 / span 1; } }
 footer {
   border-top: 2px solid rgba(255, 255, 255, 0.5); }
   footer .container {

@@ -11,7 +11,7 @@ h1.question {
 }
 
 
-@media (min-width:$breakpoint-mobile) {
+@media (max-width:$breakpoint-mobile) {
     body {
         font-size: $font-size-mobile;
     }

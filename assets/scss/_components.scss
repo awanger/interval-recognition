@@ -24,7 +24,7 @@
         @extend %hover-style;
         border-color: $audio-color;
     }
-} @media(min-width: $breakpoint-mobile) {
+} @media(max-width: $breakpoint-mobile) {
     #speaker-btn {
         width: 60px;
         height: 60px;

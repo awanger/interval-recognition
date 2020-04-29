@@ -16,7 +16,7 @@ h1.question {
   font-size: 2.4rem;
   font-weight: 500; }
 
-@media (min-width: 375px) {
+@media (max-width: 375px) {
   body {
     font-size: 12px; }
 
@@ -96,7 +96,7 @@ footer {
   #speaker-btn:hover {
     border-color: #73C2E0; }
 
-@media (min-width: 375px) {
+@media (max-width: 375px) {
   #speaker-btn {
     width: 60px;
     height: 60px; }

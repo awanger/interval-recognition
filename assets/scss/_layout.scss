@@ -58,6 +58,10 @@ body {
 
 footer {
     border-top: 2px solid rgba($primary-color, .5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
     .container {
         display: flex;
         justify-content: space-between;
@@ -72,6 +76,11 @@ footer {
 
     &.incorrect {
         background-color: $incorrect-color;
+    }
+} @media(max-width: $breakpoint-mobile) {
+    footer {
+        max-height: 20vh;       
+        padding: 8% 0;
     }
 }
 

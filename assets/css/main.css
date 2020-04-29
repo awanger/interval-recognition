@@ -18,7 +18,7 @@ h1.question {
 
 @media (max-width: 375px) {
   body {
-    font-size: 12px; }
+    font-size: 11px; }
 
   h1.question {
     font-size: 1.2rem; } }
@@ -64,7 +64,10 @@ body {
   .btn:nth-child(13) {
     grid-column: 1 / span 1; } }
 footer {
-  border-top: 2px solid rgba(255, 255, 255, 0.5); }
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
   footer .container {
     display: flex;
     justify-content: space-between; }
@@ -75,6 +78,10 @@ footer {
   footer.incorrect {
     background-color: rgba(219, 146, 146, 0.75); }
 
+@media (max-width: 375px) {
+  footer {
+    max-height: 20vh;
+    padding: 8% 0; } }
 #speaker-btn:hover, #action-btn.highlight:hover, #action-btn.correct:hover, #action-btn.incorrect:hover, .btn:hover {
   border: 2px solid;
   cursor: pointer; }

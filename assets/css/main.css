@@ -105,7 +105,7 @@ footer {
   #speaker-btn:hover {
     border-color: #73C2E0; }
   #speaker-btn.animate {
-    animation: pulse 1s infinite alternate; }
+    animation: pulse 2s infinite alternate; }
 
 @media (max-width: 450px) {
   #speaker-btn {
@@ -118,7 +118,8 @@ footer {
     transform: scale(1, 1); }
   100% {
     transform: scale(1.2, 1.2);
-    border-color: #73C2E0; } }
+    border-color: #73C2E0;
+    fill: #73C2E0; } }
 #action-btn {
   border: 2px solid rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.25);

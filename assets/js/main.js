@@ -89,8 +89,9 @@ function tryAgain() {
 
 function playQuestion() {
   answerGrid.classList.add('disable');
-  speakerBtn.classList.add('animate');
-  setTimeout(function() { player.start(currentQuestion)}, 1000);
+  setTimeout(function() { player.start(currentQuestion) 
+                          speakerBtn.classList.add('animate')}, 1000);
+  
   setTimeout(function() { answerGrid.classList.remove('disable')
                           speakerBtn.classList.remove('animate')}, 5000);
 }

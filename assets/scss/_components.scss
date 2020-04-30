@@ -19,15 +19,14 @@
 #speaker-btn {
     @extend %button-style;
     width: 120px;
-    height: 120px;
-    
+    height: 120px;    
     &:hover {
         @extend %hover-style;
         border-color: $audio-color;
     }
 
     &.animate {
-        animation: pulse 1s infinite alternate;
+        animation: pulse 2s infinite alternate;
     }
 
 } @media(max-width: $breakpoint-mobile) {
@@ -46,6 +45,7 @@
     100% {
         transform: scale(1.2, 1.2);
         border-color: $audio-color;
+        fill: $audio-color;
     }
 }
 

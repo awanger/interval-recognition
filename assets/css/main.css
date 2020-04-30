@@ -103,11 +103,9 @@ footer {
   width: 120px;
   height: 120px; }
   #speaker-btn:hover {
-    border-color: #73C2E0; }
-  #speaker-btn .img.animate {
-    animation: pulse 2s infinite alternate; }
+    border-color: #00B9FF; }
   #speaker-btn.animate {
-    animation: pulse 2s infinite alternate; }
+    animation: pulse 1s infinite alternate; }
 
 @media (max-width: 450px) {
   #speaker-btn {
@@ -119,9 +117,9 @@ footer {
   0% {
     transform: scale(1, 1); }
   100% {
-    transform: scale(1.2, 1.2);
-    border-color: #73C2E0;
-    color: #73C2E0; } }
+    transform: scale(1.22, 1.22);
+    border-color: #00B9FF;
+    color: #00B9FF; } }
 #action-btn {
   border: 2px solid rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.25);

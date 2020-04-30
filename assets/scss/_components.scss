@@ -25,14 +25,8 @@
         border-color: $audio-color;
     }
 
-    .img {
-        &.animate {
-            animation: pulse 2s infinite alternate;
-        }
-    }
-
     &.animate {
-        animation: pulse 2s infinite alternate;
+        animation: pulse 1s infinite alternate;
     }
 
 } @media(max-width: $breakpoint-mobile) {
@@ -49,7 +43,7 @@
     }
 
     100% {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.22, 1.22);
         border-color: $audio-color;
         color: $audio-color;
     }

@@ -47,6 +47,8 @@ function activateActionBtn() {
 function checkAnswer() {
   actionBtn.classList.remove("highlight");
   actionBtn.removeEventListener("click", checkAnswer, false);
+  answerGrid.classList.add("disable");
+
   var selectedCode = selectedAnswer.children[0].innerText;
   selectedAnswer.classList.remove("highlight");
 

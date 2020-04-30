@@ -104,6 +104,8 @@ footer {
   height: 120px; }
   #speaker-btn:hover {
     border-color: #73C2E0; }
+  #speaker-btn .img.animate {
+    animation: pulse 2s infinite alternate; }
   #speaker-btn.animate {
     animation: pulse 2s infinite alternate; }
 
@@ -119,7 +121,7 @@ footer {
   100% {
     transform: scale(1.2, 1.2);
     border-color: #73C2E0;
-    fill: #73C2E0; } }
+    color: #73C2E0; } }
 #action-btn {
   border: 2px solid rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.25);
@@ -154,7 +156,7 @@ footer {
     outline: none; }
 
 .icon {
-  max-width: 22px;
+  font-size: 2.5rem;
   vertical-align: center; }
 
 /*# sourceMappingURL=main.css.map */

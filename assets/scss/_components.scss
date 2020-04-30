@@ -25,6 +25,12 @@
         border-color: $audio-color;
     }
 
+    .img {
+        &.animate {
+            animation: pulse 2s infinite alternate;
+        }
+    }
+
     &.animate {
         animation: pulse 2s infinite alternate;
     }
@@ -45,7 +51,7 @@
     100% {
         transform: scale(1.2, 1.2);
         border-color: $audio-color;
-        fill: $audio-color;
+        color: $audio-color;
     }
 }
 
@@ -115,7 +121,7 @@
 }
 
 .icon {
-    max-width: 22px;
+    font-size: 2.5rem;
     vertical-align: center;
 }
 

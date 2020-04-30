@@ -121,7 +121,6 @@ function init() {
   });
   speakerBtn.addEventListener("click", playQuestion, false);
   playQuestion();
-  console.log("initialized");
 }
 
 window.onload = init;

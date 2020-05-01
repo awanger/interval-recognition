@@ -1,6 +1,3 @@
-player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
-// player = new mm.Player();
-
 const possibleAnswers = document.querySelectorAll('.btn');
 const answerGrid = document.querySelector('#answer-buttons')
 const speakerBtn = document.querySelector('#speaker-btn');
@@ -117,6 +114,8 @@ function shuffleQuestions() {
 }
 
 function init() {
+  player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
+  // player = new mm.Player();
   shuffleQuestions();
   possibleAnswers.forEach(function(button) {
     button.addEventListener("click", selectAnswer);

@@ -76,21 +76,6 @@ class QuestionFactory {
   }
 }
 
-
-
-
-
-// for debugging purposes
-// var randomInterval = createRandomInterval();
-// console.log(randomInterval);
-// console.log(calcCorrectAnswer(randomInterval));
-// const q = new Question(randomInterval, 
-//                        calcCorrectAnswer(randomInterval),
-//                         4);
-// console.log(q);
-//
-
-
 let questions = []
 const LOWEST_PITCH = 40;
 const HIGHEST_PITCH = 76;

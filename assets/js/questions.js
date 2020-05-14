@@ -25,14 +25,13 @@ class Interval {
 }
 
 class Question {
-  constructor(notes, correctAnswer) {
-      this.notes = notes; // I presume an array of notes
-      this.correctAnswer = correctAnswer;
-      this.totalTime = 4;
-  }
-}
 
-class QuestionFactory {
+  constructor(notes, correctAnswer) {
+    this.notes = notes; // I presume an array of notes
+    this.correctAnswer = correctAnswer;
+    this.totalTime = 4;
+  }
+
   // helper function
   static getRandomInteger(min, max) {
       var min = Math.floor(min);
@@ -80,8 +79,8 @@ let questions = []
 const LOWEST_PITCH = 40;
 const HIGHEST_PITCH = 76;
 for(i=0; i<2; i++) {
-  let randomInterval = QuestionFactory.generateRandomInterval(LOWEST_PITCH, HIGHEST_PITCH);
-  let correctAnswer = QuestionFactory.calcCorrectAnswer(randomInterval);
+  let randomInterval = Question.generateRandomInterval(LOWEST_PITCH, HIGHEST_PITCH);
+  let correctAnswer = Question.calcCorrectAnswer(randomInterval);
   const question = new Question([randomInterval.getFirstNote(), randomInterval.getSecondNote()], correctAnswer, 4); // keep it like this for now
   questions.push(question);
 }

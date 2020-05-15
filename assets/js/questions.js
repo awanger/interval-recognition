@@ -1,8 +1,8 @@
 class Note {
   constructor(pitch, startTime, endTime) {
-      this.pitch = pitch;
-      this.startTime = startTime;
-      this.endTime = endTime;
+    this.pitch = pitch;
+    this.startTime = startTime;
+    this.endTime = endTime;
   }
   getPitch() {
     return this.pitch;
@@ -25,7 +25,6 @@ class Interval {
 }
 
 class Question {
-
   constructor(notes, correctAnswer) {
     this.notes = notes; // I presume an array of notes
     this.correctAnswer = correctAnswer;
@@ -78,7 +77,7 @@ class Question {
 let questions = []
 const LOWEST_PITCH = 40;
 const HIGHEST_PITCH = 76;
-for(i=0; i<2; i++) {
+for(i=0; i<10; i++) {
   let randomInterval = Question.generateRandomInterval(LOWEST_PITCH, HIGHEST_PITCH);
   let correctAnswer = Question.calcCorrectAnswer(randomInterval);
   const question = new Question([randomInterval.getFirstNote(), randomInterval.getSecondNote()], correctAnswer, 4); // keep it like this for now

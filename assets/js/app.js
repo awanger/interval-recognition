@@ -15,7 +15,7 @@ function resetState() {
 
   // reset footer
   footer.classList = "";
-  comment.innerHTML= '<img class="icon" src="assets/icons/help.svg" alt="">'
+  comment.innerHTML= '<i class="fas fa-cog"></i>'
   
   // reset action button
   actionBtn.innerText = "Check";
